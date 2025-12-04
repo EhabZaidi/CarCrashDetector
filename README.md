@@ -1,8 +1,10 @@
 # Car Cras hDetector
 **Overview**
+
 Road accidents are a leading cause of injury and death worldwide, yet emergency responses are often delayed due to the absence of immediate detection and reporting systems. In many cases, surveillance or dashcam footage captures accidents, but no automated mechanism exists to recognize and alert responders in real time. This delay can cost lives, particularly in areas of low traffic or visibility. Developing an automated accident detection system can drastically improve response times and reduce fatalities by enabling instant alerts to authorities or nearby hospitals. This project leverages computer vision to identify accidents directly from images or video footage. By creating a reliable vision-based classifier, we can contribute to safer roads and more efficient emergency response infrastructure, especially in developing or rural regions lacking advanced detection systems.
 
 **Dataset**
+
 We will be using a publicly available dataset from Kaggle called “Car Crash or Collision Prediction Dataset”. It includes 10,000 images of dashcams with a lot of them involving crashes and the rest being normal dashcam images. It also contains an Excel file which tells us which image had a collision and which did not.
 
 Link: https://www.kaggle.com/datasets/mdfahimbinamin/car-crash-or-collision-prediction-dataset
@@ -18,4 +20,5 @@ Link: https://www.kaggle.com/datasets/mdfahimbinamin/car-crash-or-collision-pred
 8. I printed the Confusion Matrix, Precision, Recall, F1 score and the ROC-AUC curve and saw that the model performed relatively well across the testing set with a great recall score.
 
 **Future Applications**
+
 With this model and integrating it into dashcams in cars, we will be able to provide a extra layer of safety for drivers where if they ever get into a crash, the model will know and be able to inform local authorities. In the future, I can look to try integrating this model into an actual dashcam and maybe checking for a crash every 10-15 seconds for quick response times going forward.
