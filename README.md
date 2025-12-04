@@ -1,4 +1,4 @@
-# Car Cras hDetector
+# Car Crash Detector
 **Overview**
 
 Road accidents are a leading cause of injury and death worldwide, yet emergency responses are often delayed due to the absence of immediate detection and reporting systems. In many cases, surveillance or dashcam footage captures accidents, but no automated mechanism exists to recognize and alert responders in real time. This delay can cost lives, particularly in areas of low traffic or visibility. Developing an automated accident detection system can drastically improve response times and reduce fatalities by enabling instant alerts to authorities or nearby hospitals. This project leverages computer vision to identify accidents directly from images or video footage. By creating a reliable vision-based classifier, we can contribute to safer roads and more efficient emergency response infrastructure, especially in developing or rural regions lacking advanced detection systems.
