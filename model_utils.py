@@ -1,6 +1,3 @@
-"""
-Model utilities for loading and using the trained CNN model
-"""
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -9,7 +6,6 @@ from PIL import Image
 
 
 class Net(nn.Module):
-    """CNN model architecture matching cnnfin.ipynb"""
     def __init__(self):
         super(Net, self).__init__()
         self.conv1 = nn.Conv2d(3, 32, kernel_size=3, padding=1)
@@ -73,16 +69,7 @@ def load_model(model_path='car_crash_model.pth', device='cpu'):
 
 
 def preprocess_image(image, device='cpu'):
-    """
-    Preprocess image for inference (matching cnnfin.ipynb transforms)
     
-    Args:
-        image: PIL Image or file path
-        device: Device to put tensor on
-    
-    Returns:
-        Preprocessed image tensor
-    """
     # Same transforms as in cnnfin.ipynb
     transform = transforms.Compose([
         transforms.Resize(256),
@@ -104,18 +91,7 @@ def preprocess_image(image, device='cpu'):
 
 
 def predict_image(model, image, device='cpu', threshold=0.5):
-    """
-    Predict if image contains a car crash
-    
-    Args:
-        model: Trained model
-        image: PIL Image or file path
-        device: Device to run inference on
-        threshold: Probability threshold for classification
-    
-    Returns:
-        Dictionary with prediction ('Yes' or 'No'), probability, and confidence
-    """
+
     # Preprocess image
     image_tensor = preprocess_image(image, device)
     

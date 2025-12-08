@@ -1,7 +1,3 @@
-"""
-Streamlit Web App for Car Crash Detection
-Upload an image and get a prediction: Yes (Crash) or No (No Crash)
-"""
 import streamlit as st
 import torch
 from PIL import Image
@@ -23,7 +19,6 @@ st.markdown("---")
 # Load model (with caching to avoid reloading on every interaction)
 @st.cache_resource
 def get_model():
-    """Load the model (cached to avoid reloading)"""
     model_path = 'car_crash_model.pth'
     if not os.path.exists(model_path):
         st.error(f"Model file not found: {model_path}")
